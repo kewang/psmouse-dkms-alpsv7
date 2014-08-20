@@ -5,15 +5,8 @@ source ./dkms.conf
 MDIR="/lib/modules/$(uname -r)"
 NEWMDIR="$MDIR${DEST_MODULE_LOCATION[0]}"
 
-echo $MDIR
-echo ${DEST_MODULE_LOCATION}
-echo $NEWMDIR
-
 MFILE="$MDIR/kernel/drivers/input/mouse/${BUILT_MODULE_NAME[0]}.ko"
 NEWMFILE="$NEWMDIR/dkms/${BUILT_MODULE_NAME[0]}.ko"
-
-echo $MFILE
-echo $NEWMFILE
 
 M=psmouse-dkms-alpsv7
 V=1.0
